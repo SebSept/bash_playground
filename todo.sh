@@ -4,14 +4,15 @@ case $1 in
   '-d')
     echo implement me : supprimer l\'item $2
     ;;
-  '-l')
-    echo implement me : lister les taches
+  -z)
+    cat ./.todo
     ;;
   '-h')
     echo afficher l\'aide
     ;;
   *)
-    echo ajouter la tache $1
+    echo ajout de la tache
+    echo "$1" >> .todo
     ;;
 #  *)
 #    echo par defaut : non attendu : help
