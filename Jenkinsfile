@@ -1,15 +1,13 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World from scm'
-            }
-            steps {
-                checkout scm
-                sh 'cat h.sh'
-            }
-        }
+  agent any
+  stages {
+    stage('stage one') {
+      steps {
+        sh 'date;echo \'hello sh\';'
+        checkout scm
+        sh 'cat h.sh'
+      }
     }
+  }
 }
+
