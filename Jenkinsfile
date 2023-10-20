@@ -8,7 +8,7 @@ pipeline {
             }
             steps {
                 checkout scm
-                cat h.sh
+                sh 'cat h.sh'
             }
         }
     }
